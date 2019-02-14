@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvFirstNameDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#080F4B" />
+
+        <TextView
+            android:id="@+id/tvLastNameDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="#EEE60F0F" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etFirstNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="FIRST NAME"/>
+
+    <EditText
+        android:id="@+id/etLastNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LAST NAME"/>
+
+    <Button
+        android:id="@+id/btnSendName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLICK TO DISPLAY NAME"
+        android:onClick="onButtonClickHandler"/>
+
+    <Button
+        android:id="@+id/btnClearName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLICK TO CLEAR NAME"
+        android:onClick="onButtonClickHandler"/>
+
+</LinearLayout>
