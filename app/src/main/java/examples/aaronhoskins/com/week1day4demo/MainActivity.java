@@ -1,5 +1,7 @@
 package examples.aaronhoskins.com.week1day4demo;
 
+import android.content.Intent;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -57,9 +59,19 @@ public class MainActivity extends AppCompatActivity implements TextWatcher, View
             case R.id.btnClearName:
                 tvFirstName.setText("");
                 tvLastName.setText("");
+                Intent secondActivityIntent = new Intent(this, SecondActivity.class);
+                startActivity(secondActivityIntent);
+                startActivityForResult(secondActivityIntent, 666);
                 break;
 
         }
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override
